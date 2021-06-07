@@ -1,6 +1,5 @@
 # deluge-client
 
----
 A typescript wrapper for the Deluge Web JSON-RPC API using Async / Await
 
 ### installing
