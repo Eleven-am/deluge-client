@@ -26,7 +26,7 @@ for private indexes you can provide your own cookies to be used for the torrent 
 
 const cookie = {
 'private-indexer.torrent': "my private cookie for indexer",
-'private-two-indexer.torrent': "my second private cookie for indexer",
+'private-two-indexer.torrent': "my second private cookie for indexer"
 }
 
 ###### const deluge = new DelugeClient(host, password, folder, cookies)
