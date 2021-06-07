@@ -1,7 +1,7 @@
 import validUrl from 'valid-url';
 import axios, {AxiosResponse} from "axios";
 
-export class DelugeHandler {
+export default class DelugeHandler {
     private msgId = 0;
     private loggedIn = false;
     private SESSION_COOKIE = '';
