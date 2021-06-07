@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "A typescript wrapper for the Deluge Web JSON-RPC API using Async / Await",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
