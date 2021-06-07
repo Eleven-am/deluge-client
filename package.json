@@ -1,0 +1,22 @@
+{
+  "name": "deluge-client",
+  "version": "1.0.0",
+  "description": "A typescript client for the deluge API",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "deluge",
+    "typescript"
+  ],
+  "author": "Roy OSSAI",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "@types/valid-url": "^1.0.3"
+  }
+}
