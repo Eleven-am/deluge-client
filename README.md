@@ -32,5 +32,5 @@ const cookie = {
 ###### const deluge = new DelugeClient(host, password, folder, cookies)
 
 ### available methods
-getHosts, connect, add and getRecords
+getHosts, isConnected, connect, add and getRecords
  

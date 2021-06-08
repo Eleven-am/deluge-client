@@ -43,6 +43,14 @@ export default class DelugeHandler {
     }
 
     /**
+     * @desc checks if the daewmon is connected
+     */
+    async isConnected() {
+        const response = await this.secondCalls('web.connected', []);
+        return response === true; 
+    }
+
+    /**
      * @desc Connects the WebUI to the wanted daemon
      * @param hostId the id of the daemon to connect to
      */
