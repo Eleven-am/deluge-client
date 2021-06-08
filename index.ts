@@ -47,7 +47,7 @@ export default class DelugeHandler {
      */
     async isConnected() {
         const response = await this.secondCalls('web.connected', []);
-        return response === true; 
+        return response && response.result === true;
     }
 
     /**
