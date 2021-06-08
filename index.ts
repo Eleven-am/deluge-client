@@ -1,5 +1,5 @@
+import validUrl from 'valid-url';
 import axios, {AxiosResponse} from "axios";
-const validUrl = require('valid-url');
 
 export default class DelugeHandler {
     private msgId = 0;
@@ -160,7 +160,7 @@ export default class DelugeHandler {
                     'Content-Type': 'application/json',
                     'Cookie': this.SESSION_COOKIE
                 }
-            }).then((data: AxiosResponse<any> | PromiseLike<AxiosResponse<any> | null> | null) => {
+            }).then(data => {
                 resolve(data);
             }).catch(() => resolve(null))
         })
