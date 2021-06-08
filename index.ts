@@ -31,13 +31,15 @@ export default class DelugeHandler {
     /**
      * @desc Get the list of all the hosts that the WebUI can connect to
      */
-    async getHosts() {
+    async getHosts():Promise<{id: string, ip: string, port: number, status: string}[] | null> {
         let response = await this.secondCalls('web.get_hosts', []);
         if (response && response.result) {
             return response.result.map((element: any[]) => {
                 return {id: element[0], ip: element[1], port: element[2], status: element[3]}
             })
         }
+
+        return null;
     }
 
     /**
