@@ -21,7 +21,7 @@ const folder = 'folder where downloaded files should be saved to';
 ###### const deluge = new DelugeClient(host, password, folder);
 ###### await deluge.add('url to torrent magnet || torrent file url');
 
-###advanced features 
+### advanced features 
 for private indexes you can provide your own cookies to be used for the torrent download by adding the cookie object in the constructor
 
 const cookie = {

@@ -1,8 +1,8 @@
 {
   "name": "deluge-client",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "A typescript wrapper for the Deluge Web JSON-RPC API using Async / Await",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,13 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eleven-am/deluge-client.git"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "@types/valid-url": "^1.0.3"
   }
 }
