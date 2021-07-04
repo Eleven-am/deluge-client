@@ -1,6 +1,6 @@
 {
   "name": "deluge-client",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A typescript wrapper for the Deluge Web JSON-RPC API using Async / Await",
   "main": "dist/index.js",
   "scripts": {

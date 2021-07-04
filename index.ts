@@ -134,15 +134,11 @@ export default class DelugeHandler {
             }
 
             let response = await this.secondCalls('web.download_torrent_from_url', [magnet, cookie]);
-            if (response) {
-                const params = this.formParams(response);
-                await this.secondCalls('web.add_torrents', params);
+            if (response)
+                await this.addTorrent(response);
 
-            }
-        } else {
-            const params = this.formParams(magnet);
-            await this.secondCalls('web.add_torrents', params);
-        }
+        } else
+            await this.addTorrent(magnet);
 
     }
 
@@ -232,6 +228,17 @@ export default class DelugeHandler {
             }).then(data => {
                 resolve(data);
             }).catch(() => resolve(null))
+        })
+    }
+
+    private addTorrent(magnet: string) {
+        const params = this.formParams(magnet);
+        return new Promise<void>(resolve => {
+            setTimeout(() => resolve(), 5000);
+
+            this.secondCalls('web.add_torrents', params)
+                .then(() => resolve())
+                .catch(err => console.log(err))
         })
     }
 
