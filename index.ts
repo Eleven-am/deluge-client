@@ -135,7 +135,7 @@ export default class DelugeHandler {
 
             let response = await this.secondCalls('web.download_torrent_from_url', [magnet, cookie]);
             if (response)
-                await this.addTorrent(response);
+                await this.addTorrent(response.result);
 
         } else
             await this.addTorrent(magnet);
@@ -197,7 +197,7 @@ export default class DelugeHandler {
     private async secondCalls(method: string, params: any[]) {
         let response;
         if (!this.loggedIn) {
-            await this.authenticate()
+            await this.authenticate();
             response = await this.call({
                 params,
                 method
